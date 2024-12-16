@@ -18,6 +18,8 @@
 		8E063A282D104948002D2941 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A272D104948002D2941 /* TextField.swift */; };
 		8E063A2B2D105122002D2941 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A2A2D105122002D2941 /* UIView.swift */; };
 		8E063A2E2D105CEA002D2941 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A2D2D105CEA002D2941 /* Button.swift */; };
+		8E063A332D106C91002D2941 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A322D106C91002D2941 /* RegistrationView.swift */; };
+		8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8E063A272D104948002D2941 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		8E063A2A2D105122002D2941 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8E063A2D2D105CEA002D2941 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8E063A322D106C91002D2941 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,9 @@
 		8E063A162D1043D9002D2941 /* RegistrationView */ = {
 			isa = PBXGroup;
 			children = (
+				8E063A312D106C45002D2941 /* Presenter */,
+				8E063A302D106C40002D2941 /* Model */,
+				8E063A2F2D106C39002D2941 /* View */,
 			);
 			path = RegistrationView;
 			sourceTree = "<group>";
@@ -208,6 +215,29 @@
 				8E063A2D2D105CEA002D2941 /* Button.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		8E063A2F2D106C39002D2941 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E063A322D106C91002D2941 /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E063A302D106C40002D2941 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E063A312D106C45002D2941 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +318,12 @@
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
+				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
 				8E063A1B2D104494002D2941 /* AuthenticationView.swift in Sources */,
 				8E063A2E2D105CEA002D2941 /* Button.swift in Sources */,
 				8E063A202D10463E002D2941 /* Builder.swift in Sources */,
+				8E063A332D106C91002D2941 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
