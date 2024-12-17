@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E03B3D62D11A45A00277D2B /* String.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3D52D11A45A00277D2B /* String.ext.swift */; };
+		8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3D82D11A61B00277D2B /* NSNotification.Name.ext.swift */; };
 		8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A012D10438D002D2941 /* AppDelegate.swift */; };
 		8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A062D10438D002D2941 /* SceneDelegate.swift */; };
 		8E063A0C2D10438D002D2941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E063A022D10438D002D2941 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E03B3D52D11A45A00277D2B /* String.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.ext.swift; sourceTree = "<group>"; };
+		8E03B3D82D11A61B00277D2B /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		8E0639E92D104245002D2941 /* MyMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E063A012D10438D002D2941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E063A022D10438D002D2941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E03B3D32D11A43100277D2B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8E063A2A2D105122002D2941 /* UIView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		8E03B3D42D11A43D00277D2B /* String */ = {
+			isa = PBXGroup;
+			children = (
+				8E03B3D52D11A45A00277D2B /* String.ext.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		8E03B3D72D11A5F000277D2B /* NSNotification.Name */ = {
+			isa = PBXGroup;
+			children = (
+				8E03B3D82D11A61B00277D2B /* NSNotification.Name.ext.swift */,
+			);
+			path = NSNotification.Name;
+			sourceTree = "<group>";
+		};
 		8E0639E02D104245002D2941 = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +232,9 @@
 		8E063A292D105116002D2941 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8E063A2A2D105122002D2941 /* UIView.swift */,
+				8E03B3D72D11A5F000277D2B /* NSNotification.Name */,
+				8E03B3D42D11A43D00277D2B /* String */,
+				8E03B3D32D11A43100277D2B /* UIView */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,12 +346,14 @@
 				8E063A2B2D105122002D2941 /* UIView.swift in Sources */,
 				8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */,
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
+				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
 				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
 				8E063A1B2D104494002D2941 /* AuthenticationView.swift in Sources */,
 				8E063A2E2D105CEA002D2941 /* Button.swift in Sources */,
+				8E03B3D62D11A45A00277D2B /* String.ext.swift in Sources */,
 				8E063A202D10463E002D2941 /* Builder.swift in Sources */,
 				8E063A332D106C91002D2941 /* RegistrationView.swift in Sources */,
 			);

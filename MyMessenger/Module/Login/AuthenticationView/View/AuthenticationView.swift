@@ -31,6 +31,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         print("Authenticate")
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
+        NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.registrationWindow])
         print("Go to Registration")
     }
     

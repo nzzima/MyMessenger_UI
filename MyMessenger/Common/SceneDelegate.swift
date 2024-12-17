@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum WindowManager: String {
+    case authentificationWindow, registrationWindow, appWindow
+}
+
+enum UserInfoKeys: String {
+    case state
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -14,11 +22,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        NotificationCenter.default.addObserver(self, selector: #selector(windowManager(notification:)), name: .windowManager, object: nil)
+        
         guard let scene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = Builder.getRegistrationView()
+        window?.rootViewController = Builder.getAuthenticationView()
         window?.makeKeyAndVisible()
+    }
+    
+    @objc
+    private func windowManager(notification: Notification) {
+        
+        guard let userInfo = notification.userInfo as? [String: Any] else { return }
+        
+        guard let state = userInfo[.state] as? WindowManager else {
+            return
+        }
+        
+        switch state {
+        case .authentificationWindow:
+            window?.rootViewController = Builder.getAuthenticationView()
+        case .registrationWindow:
+            window?.rootViewController = Builder.getRegistrationView()
+        case .appWindow:
+            print("App window")
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
