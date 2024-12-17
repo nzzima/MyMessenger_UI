@@ -30,8 +30,8 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") {
         print("Authenticate")
     }
-    private lazy var bottomButton: UIButton = Button(buttonText: "Register", buttonColor: .black, titleColor: .white) {
-        print("Registration")
+    private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
+        print("Go to Registration")
     }
     
     override func viewDidLoad() {
@@ -40,10 +40,10 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         
         view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
         
-        setContraints()
+        setConstraints()
     }
     
-    private func setContraints() {
+    private func setConstraints() {
         NSLayoutConstraint.activate([
             pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             pageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -57,6 +57,12 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
             passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             passwordField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30),
+            
+            passwordField.heightAnchor.constraint(equalToConstant: 50),
+            passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            passwordField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30),
+            
             
             phoneField.heightAnchor.constraint(equalToConstant: 50),
             phoneField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

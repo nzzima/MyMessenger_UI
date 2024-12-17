@@ -13,6 +13,7 @@ protocol RegistrationViewPresenterProtocol: AnyObject {
 
 class RegistrationViewPresenter: RegistrationViewPresenterProtocol {
     weak var view: RegistrationViewProtocol?
+    
     required init(view: any RegistrationViewProtocol) {
         self.view = view
     }
