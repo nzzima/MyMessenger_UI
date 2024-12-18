@@ -17,6 +17,4 @@ class AuthenticationViewPresenter: AuthenticationViewPresenterProtocol {
     required init(view: any AuthenticationViewProtocol) {
         self.view = view
     }
-    
-    
 }

@@ -25,4 +25,13 @@ class Builder {
         
         return view
     }
+    
+    static func getStartView() -> UIViewController {
+        let view = StartView()
+        let presenter = StartViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
 }

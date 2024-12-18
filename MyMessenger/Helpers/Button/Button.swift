@@ -30,11 +30,12 @@ class Button: UIButton {
         }), for: .touchUpInside)
         
         translatesAutoresizingMaskIntoConstraints = false
+        titleLabel?.font = UIFont(name: "Copperplate", size: 16)
         setTitle(buttonText, for: .normal)
         backgroundColor = buttonColor
         setTitleColor(titleColor, for: .normal)
         
-        layer.cornerRadius = 10
+        layer.cornerRadius = 14
     }
     
     required init?(coder: NSCoder) {

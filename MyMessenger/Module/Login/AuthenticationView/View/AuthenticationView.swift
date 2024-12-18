@@ -19,7 +19,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         $0.text = "Authentication"
         $0.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .systemFont(ofSize: 32, weight: .black)
+        $0.font = UIFont(name: "Copperplate", size: 26)
         return $0
     }(UILabel())
     
@@ -37,7 +37,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
         view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
         
@@ -72,8 +72,8 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
             
             authentecateButton.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 40),
             authentecateButton.heightAnchor.constraint(equalToConstant: 50),
-            authentecateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            authentecateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            authentecateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 140),
+            authentecateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -140),
             
             bottomButton.heightAnchor.constraint(equalToConstant: 50),
             bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

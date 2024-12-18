@@ -19,7 +19,7 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
         $0.text = "Registration"
         $0.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .systemFont(ofSize: 32, weight: .black)
+        $0.font = UIFont(name: "Copperplate", size: 26)
         return $0
     }(UILabel())
     
@@ -40,7 +40,7 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
         view.addSubviews(nameField, surnameField, pageTitle, loginField, passwordField, passwordConfirmField, phoneField, registrationButton, bottomButton)
         
@@ -84,8 +84,8 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
             
             registrationButton.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 40),
             registrationButton.heightAnchor.constraint(equalToConstant: 50),
-            registrationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            registrationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            registrationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 140),
+            registrationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -140),
             
             bottomButton.heightAnchor.constraint(equalToConstant: 50),
             bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
