@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 protocol AuthenticationViewProtocol: AnyObject {
     
 }
@@ -14,6 +15,8 @@ protocol AuthenticationViewProtocol: AnyObject {
 class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     
     var presenter: AuthenticationViewPresenterProtocol!
+    
+    
     
     let pageTitle: UILabel = {
         $0.text = "Authentication"
@@ -41,7 +44,15 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         
         view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
         
+        setuPhoneNumber()
         setConstraints()
+    }
+    
+    private func setuPhoneNumber() {
+        authentecateButton.alpha = 0.5
+        authentecateButton.isEnabled = false
+        
+        phoneField.displayMode = .list
     }
     
     private func setConstraints() {
@@ -63,7 +74,6 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
             passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             passwordField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30),
-            
             
             phoneField.heightAnchor.constraint(equalToConstant: 50),
             phoneField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
