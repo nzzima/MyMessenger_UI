@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol AuthenticationViewProtocol: AnyObject {
     
 }
@@ -15,8 +14,6 @@ protocol AuthenticationViewProtocol: AnyObject {
 class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     
     var presenter: AuthenticationViewPresenterProtocol!
-    
-    
     
     let pageTitle: UILabel = {
         $0.text = "Authentication"
@@ -31,6 +28,14 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
     private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") {
+        if let text = self.phoneField.text, !text.isEmpty {
+            
+            //MARK: -- Добавить проверку на введенные данные (только числа и символ +)
+            NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.checkCodeWindow])
+        } else {
+            print("Phone field is empty. Please enter phone")
+        }
+        
         print("Authenticate")
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
@@ -44,15 +49,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         
         view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
         
-        setuPhoneNumber()
         setConstraints()
-    }
-    
-    private func setuPhoneNumber() {
-        authentecateButton.alpha = 0.5
-        authentecateButton.isEnabled = false
-        
-        phoneField.displayMode = .list
     }
     
     private func setConstraints() {

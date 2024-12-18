@@ -34,4 +34,13 @@ class Builder {
         
         return view
     }
+    
+    static func getCheckCodeView() -> UIViewController {
+        let view = CheckPhoneCodeView()
+        let presenter = CheckPhoneCodeViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
 }

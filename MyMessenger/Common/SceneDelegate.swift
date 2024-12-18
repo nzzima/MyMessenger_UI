@@ -8,7 +8,7 @@
 import UIKit
 
 enum WindowManager: String {
-    case startWindow, authentificationWindow, registrationWindow, appWindow
+    case startWindow, authentificationWindow, registrationWindow, checkCodeWindow, appWindow
 }
 
 enum UserInfoKeys: String {
@@ -45,6 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = Builder.getStartView()
         case .authentificationWindow:
             window?.rootViewController = Builder.getAuthenticationView()
+        case .checkCodeWindow:
+            window?.rootViewController = Builder.getCheckCodeView()
         case .registrationWindow:
             window?.rootViewController = Builder.getRegistrationView()
         case .appWindow:
