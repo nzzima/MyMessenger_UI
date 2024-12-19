@@ -28,6 +28,12 @@
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
 		8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */; };
 		8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35782D14087D00567937 /* PhoneFieldDelegate.swift */; };
+		8EEB357F2D14431A00567937 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB357E2D14431A00567937 /* TabBarPresenter.swift */; };
+		8EEB35812D14432500567937 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35802D14432500567937 /* TabBarView.swift */; };
+		8EEB35882D144F0E00567937 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35872D144F0E00567937 /* UserListView.swift */; };
+		8EEB358B2D144F7700567937 /* UserListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB358A2D144F7700567937 /* UserListViewPresenter.swift */; };
+		8EEB35922D14571E00567937 /* MessagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35912D14571E00567937 /* MessagesListView.swift */; };
+		8EEB35942D14574300567937 /* MessagesListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
 		8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.ext.swift; sourceTree = "<group>"; };
 		8EEB35782D14087D00567937 /* PhoneFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFieldDelegate.swift; sourceTree = "<group>"; };
+		8EEB357E2D14431A00567937 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		8EEB35802D14432500567937 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		8EEB35872D144F0E00567937 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		8EEB358A2D144F7700567937 /* UserListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewPresenter.swift; sourceTree = "<group>"; };
+		8EEB35912D14571E00567937 /* MessagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListView.swift; sourceTree = "<group>"; };
+		8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +178,8 @@
 		8E063A102D1043AD002D2941 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				8E063A142D1043CA002D2941 /* Login */,
 				8E063A122D1043BB002D2941 /* App */,
+				8E063A142D1043CA002D2941 /* Login */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -186,6 +198,8 @@
 		8E063A122D1043BB002D2941 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8EEB35822D144B2B00567937 /* UserList */,
+				8EEB35832D144B3300567937 /* Messages */,
 				8E063A132D1043C4002D2941 /* TabBar */,
 			);
 			path = App;
@@ -194,6 +208,9 @@
 		8E063A132D1043C4002D2941 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8EEB357C2D1442EC00567937 /* Presenter */,
+				8EEB357B2D1442E400567937 /* Model */,
+				8EEB357A2D1442DB00567937 /* View */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -368,6 +385,111 @@
 			path = PhoneFieldDelegate;
 			sourceTree = "<group>";
 		};
+		8EEB357A2D1442DB00567937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35802D14432500567937 /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EEB357B2D1442E400567937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EEB357C2D1442EC00567937 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB357E2D14431A00567937 /* TabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8EEB35822D144B2B00567937 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35862D144D2600567937 /* Presenter */,
+				8EEB35852D144D2200567937 /* Model */,
+				8EEB35842D144D1B00567937 /* View */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		8EEB35832D144B3300567937 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB358D2D1456F300567937 /* Messages */,
+				8EEB358C2D1456E500567937 /* Messenger */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		8EEB35842D144D1B00567937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35872D144F0E00567937 /* UserListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EEB35852D144D2200567937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EEB35862D144D2600567937 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB358A2D144F7700567937 /* UserListViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8EEB358C2D1456E500567937 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messenger;
+			sourceTree = "<group>";
+		};
+		8EEB358D2D1456F300567937 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35902D14570500567937 /* Presenter */,
+				8EEB358F2D14570100567937 /* Model */,
+				8EEB358E2D1456FD00567937 /* View */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		8EEB358E2D1456FD00567937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35912D14571E00567937 /* MessagesListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EEB358F2D14570100567937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EEB35902D14570500567937 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,21 +565,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEB357F2D14431A00567937 /* TabBarPresenter.swift in Sources */,
 				8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */,
 				8E063A2B2D105122002D2941 /* UIView.ext.swift in Sources */,
 				8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */,
 				8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */,
+				8EEB358B2D144F7700567937 /* UserListViewPresenter.swift in Sources */,
 				8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */,
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
+				8EEB35882D144F0E00567937 /* UserListView.swift in Sources */,
 				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
 				8E03B3E22D11AB6400277D2B /* StartView.swift in Sources */,
+				8EEB35942D14574300567937 /* MessagesListViewPresenter.swift in Sources */,
 				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
 				8E03B3E02D11AB5800277D2B /* StartViewPresenter.swift in Sources */,
+				8EEB35922D14571E00567937 /* MessagesListView.swift in Sources */,
 				8E063A1B2D104494002D2941 /* AuthenticationView.swift in Sources */,
 				8E063A2E2D105CEA002D2941 /* Button.swift in Sources */,
+				8EEB35812D14432500567937 /* TabBarView.swift in Sources */,
 				8E03B3D62D11A45A00277D2B /* String.ext.swift in Sources */,
 				8E063A202D10463E002D2941 /* Builder.swift in Sources */,
 				8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */,

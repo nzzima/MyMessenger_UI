@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BAA79C27-7D6F-4CD1-A0E1-9A3703F48147"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AuthenticationView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110 - 940cd34d2ddb179d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyMessenger.AuthenticationView.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MyMessenger.AuthenticationView"
+                  moduleName = "MyMessenger.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nzzima/Desktop/IOS/AppsSwift/MyMessenger/MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110 - 32a276e45377cebc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyMessenger.AuthenticationView.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MyMessenger.AuthenticationView"
+                  moduleName = "MyMessenger.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nzzima/Desktop/IOS/AppsSwift/MyMessenger/MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110 - bd89f26cb5c5e054"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyMessenger.AuthenticationView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyMessenger.AuthenticationView&gt;"
+                  moduleName = "MyMessenger.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nzzima/Desktop/IOS/AppsSwift/MyMessenger/MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110 - 59b485fc655b5da7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyMessenger.AuthenticationView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyMessenger.AuthenticationView&gt;"
+                  moduleName = "MyMessenger.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nzzima/Desktop/IOS/AppsSwift/MyMessenger/MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "5EAE52CF-AE8D-4CFC-BDCE-74CA36237110 - 216cbba2caba625c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyMessenger.AuthenticationView.__deallocating_deinit"
+                  moduleName = "MyMessenger.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nzzima/Desktop/IOS/AppsSwift/MyMessenger/MyMessenger/Module/Login/AuthenticationView/View/AuthenticationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

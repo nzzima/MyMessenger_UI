@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = Builder.getStartView()
+        window?.rootViewController = Builder.getTabBarView()
         window?.makeKeyAndVisible()
     }
     
@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case .registrationWindow:
             window?.rootViewController = Builder.getRegistrationView()
         case .appWindow:
-            print("App window")
+            window?.rootViewController = Builder.getTabBarView()
         }
         
     }

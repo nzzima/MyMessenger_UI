@@ -31,6 +31,8 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
     private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") {
+        
+        // MARK: -- Добавить проверку на не пустые поля ввода
         NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.checkCodeWindow])
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
