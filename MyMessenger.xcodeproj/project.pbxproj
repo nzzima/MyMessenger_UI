@@ -26,6 +26,8 @@
 		8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */; };
 		8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */; };
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
+		8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */; };
+		8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35782D14087D00567937 /* PhoneFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewPresenter.swift; sourceTree = "<group>"; };
 		8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.swift; sourceTree = "<group>"; };
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
+		8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.ext.swift; sourceTree = "<group>"; };
+		8EEB35782D14087D00567937 /* PhoneFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 		8E063A292D105116002D2941 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8EEB35772D14085500567937 /* PhoneFieldDelegate */,
+				8EEB35742D13F6EF00567937 /* CheckPhoneCode */,
 				8E03B3D72D11A5F000277D2B /* NSNotification.Name */,
 				8E03B3D42D11A43D00277D2B /* String */,
 				8E03B3D32D11A43100277D2B /* UIView */,
@@ -344,6 +350,22 @@
 				8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8EEB35742D13F6EF00567937 /* CheckPhoneCode */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */,
+			);
+			path = CheckPhoneCode;
+			sourceTree = "<group>";
+		};
+		8EEB35772D14085500567937 /* PhoneFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB35782D14087D00567937 /* PhoneFieldDelegate.swift */,
+			);
+			path = PhoneFieldDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */,
 				8E063A2B2D105122002D2941 /* UIView.ext.swift in Sources */,
+				8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */,
 				8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */,
 				8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */,
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,

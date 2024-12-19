@@ -5,10 +5,10 @@
 //  Created by Nikita Krylov on 17.12.2024.
 //
 
-import Foundation
+import SwiftUI
 
 extension String {
-    static func locolize(_ text: String.LocalizationValue) -> String {
+    func locolize(_ text: String.LocalizationValue) -> String {
         String(localized: text)
     }
 }

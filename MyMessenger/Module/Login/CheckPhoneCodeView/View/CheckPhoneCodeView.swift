@@ -35,14 +35,13 @@ class CheckPhoneCodeView: UIViewController, CheckPhoneCodeViewProtocol {
     
     private lazy var codeField:UITextField = TextField(fieldPlaceholder: "")
     
-    private lazy var sendButton:UIButton = Button(buttonText: "Check code") {
+    public lazy var sendButton:UIButton = Button(buttonText: "Check code") {
         print("Sending code to phone number...")
     }
     
     private func setupConfig() {
         sendButton.alpha = 0.5
         sendButton.isEnabled = false
-        
         codeField.delegate = self
     }
     
@@ -60,25 +59,5 @@ class CheckPhoneCodeView: UIViewController, CheckPhoneCodeViewProtocol {
             sendButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 140),
             sendButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -140),
         ])
-    }
-}
-
-extension CheckPhoneCodeView: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let currentCharacterCount = textField.text?.count ?? 0
-        if range.length + range.location > currentCharacterCount {
-            return false
-        }
-        let newLength = currentCharacterCount + string.count - range.length
-        return newLength <= 6
-        
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField.text?.count == 6 {
-            sendButton.alpha = 1
-            sendButton.isEnabled = true
-        }
     }
 }

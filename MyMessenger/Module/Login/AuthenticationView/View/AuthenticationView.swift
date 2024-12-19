@@ -15,6 +15,9 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     
     var presenter: AuthenticationViewPresenterProtocol!
     
+    private let maxNumberCount = 11
+    private let regex = try! NSRegularExpression(pattern: "[\\+\\s-\\(\\)]", options: .caseInsensitive)
+    
     let pageTitle: UILabel = {
         $0.text = "Authentication"
         $0.textColor = .white
@@ -28,15 +31,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
     private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") {
-        if let text = self.phoneField.text, !text.isEmpty {
-            
-            //MARK: -- Добавить проверку на введенные данные (только числа и символ +)
-            NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.checkCodeWindow])
-        } else {
-            print("Phone field is empty. Please enter phone")
-        }
-        
-        print("Authenticate")
+        NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.checkCodeWindow])
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
         NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.registrationWindow])
@@ -48,6 +43,9 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
         view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
+        
+        phoneField.delegate = self
+        phoneField.keyboardType = .decimalPad
         
         setConstraints()
     }
@@ -87,5 +85,34 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             bottomButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
         ])
+    }
+    
+    public func format(phoneNumber: String, shouldRemoveLastDigit: Bool) -> String {
+        guard !(shouldRemoveLastDigit && phoneNumber.count <= 2) else { return "+"}
+        
+        let range = NSString(string: phoneNumber).range(of: phoneNumber)
+        var number = regex.stringByReplacingMatches(in: phoneNumber, options: [], range: range, withTemplate: "")
+        
+        if number.count > maxNumberCount {
+            let maxIndex = number.index(number.startIndex, offsetBy: maxNumberCount)
+            number = String(number[number.startIndex..<maxIndex])
+        }
+        
+        if shouldRemoveLastDigit {
+            let maxIndex = number.index(number.startIndex, offsetBy: number.count - 1)
+            number = String(number[number.startIndex..<maxIndex])
+        }
+        
+        let maxIndex = number.index(number.startIndex, offsetBy: number.count)
+        let regRange = number.startIndex..<maxIndex
+        
+        if number.count < 7 {
+            let pattern = "(\\d)(\\d{3})(\\d+)"
+            number = number.replacingOccurrences(of: pattern, with: "$1 ($2) $3", options: .regularExpression, range: regRange)
+        } else {
+            let pattern = "(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d+)"
+            number = number.replacingOccurrences(of: pattern, with: "$1 ($2) $3-$4-$5", options: .regularExpression, range: regRange)
+        }
+        return "+" + number
     }
 }

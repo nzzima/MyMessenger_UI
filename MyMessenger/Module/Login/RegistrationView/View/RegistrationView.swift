@@ -15,6 +15,9 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
     
     var presenter: RegistrationViewPresenterProtocol!
     
+    private let maxNumberCount = 11
+    private let regex = try! NSRegularExpression(pattern: "[\\+\\s-\\(\\)]", options: .caseInsensitive)
+    
     let pageTitle: UILabel = {
         $0.text = "Registration"
         $0.textColor = .white
@@ -43,6 +46,9 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
         view.addSubviews(nameField, surnameField, pageTitle, loginField, passwordField, passwordConfirmField, phoneField, registrationButton, bottomButton)
+        
+        phoneField.delegate = self
+        phoneField.keyboardType = .decimalPad
         
         setConstraints()
     }
@@ -92,5 +98,34 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             bottomButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
         ])
+    }
+    
+    public func format(phoneNumber: String, shouldRemoveLastDigit: Bool) -> String {
+        guard !(shouldRemoveLastDigit && phoneNumber.count <= 2) else { return "+"}
+        
+        let range = NSString(string: phoneNumber).range(of: phoneNumber)
+        var number = regex.stringByReplacingMatches(in: phoneNumber, options: [], range: range, withTemplate: "")
+        
+        if number.count > maxNumberCount {
+            let maxIndex = number.index(number.startIndex, offsetBy: maxNumberCount)
+            number = String(number[number.startIndex..<maxIndex])
+        }
+        
+        if shouldRemoveLastDigit {
+            let maxIndex = number.index(number.startIndex, offsetBy: number.count - 1)
+            number = String(number[number.startIndex..<maxIndex])
+        }
+        
+        let maxIndex = number.index(number.startIndex, offsetBy: number.count)
+        let regRange = number.startIndex..<maxIndex
+        
+        if number.count < 7 {
+            let pattern = "(\\d)(\\d{3})(\\d+)"
+            number = number.replacingOccurrences(of: pattern, with: "$1 ($2) $3", options: .regularExpression, range: regRange)
+        } else {
+            let pattern = "(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d+)"
+            number = number.replacingOccurrences(of: pattern, with: "$1 ($2) $3-$4-$5", options: .regularExpression, range: regRange)
+        }
+        return "+" + number
     }
 }
