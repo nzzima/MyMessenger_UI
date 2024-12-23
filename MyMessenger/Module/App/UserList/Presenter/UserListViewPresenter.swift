@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserListViewPresenterProtocol: AnyObject {
-    init(view: UserListViewProtocol)
+    //init(view: UserListViewProtocol)
     var users: [ChatUser] { get set }
 }
 

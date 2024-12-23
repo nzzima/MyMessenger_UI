@@ -17,6 +17,6 @@ struct ChatUser {
          ChatUser(id: UUID().uuidString, name: "User3"),
          ChatUser(id: UUID().uuidString, name: "User4"),
          ChatUser(id: UUID().uuidString, name: "User5"),
-         ChatUser(id: UUID().uuidString, name: "User6"),]
+         ChatUser(id: UUID().uuidString, name: "User6")]
     }
 }
