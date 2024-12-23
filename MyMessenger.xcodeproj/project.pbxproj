@@ -24,6 +24,9 @@
 		8E063A2E2D105CEA002D2941 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A2D2D105CEA002D2941 /* Button.swift */; };
 		8E063A332D106C91002D2941 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A322D106C91002D2941 /* RegistrationView.swift */; };
 		8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */; };
+		8E0BE2782D194CA200A1CCAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE2772D194CA200A1CCAA /* ProfileView.swift */; };
+		8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE2792D194CB500A1CCAA /* ProfileViewPresenter.swift */; };
+		8E0BE27C2D1950A700A1CCAA /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */; };
 		8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */; };
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
 		8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */; };
@@ -56,6 +59,9 @@
 		8E063A2D2D105CEA002D2941 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8E063A322D106C91002D2941 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		8E063A342D106CA3002D2941 /* RegistrationViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewPresenter.swift; sourceTree = "<group>"; };
+		8E0BE2772D194CA200A1CCAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8E0BE2792D194CB500A1CCAA /* ProfileViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewPresenter.swift; sourceTree = "<group>"; };
+		8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.swift; sourceTree = "<group>"; };
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
 		8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.ext.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		8E063A122D1043BB002D2941 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8E0BE2732D194C7000A1CCAA /* Profile */,
 				8EEB35822D144B2B00567937 /* UserList */,
 				8EEB35832D144B3300567937 /* Messages */,
 				8E063A132D1043C4002D2941 /* TabBar */,
@@ -336,6 +343,39 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8E0BE2732D194C7000A1CCAA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2762D194C8600A1CCAA /* Presenter */,
+				8E0BE2752D194C8100A1CCAA /* Model */,
+				8E0BE2742D194C7A00A1CCAA /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8E0BE2742D194C7A00A1CCAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2772D194CA200A1CCAA /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E0BE2752D194C8100A1CCAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E0BE2762D194C8600A1CCAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2792D194CB500A1CCAA /* ProfileViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		8EC1C0A42D12EE7900A7481D /* CheckPhoneCodeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,7 +461,7 @@
 		8EEB35832D144B3300567937 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				8EEB358D2D1456F300567937 /* Messages */,
+				8EEB358D2D1456F300567937 /* MessagesList */,
 				8EEB358C2D1456E500567937 /* Messenger */,
 			);
 			path = Messages;
@@ -438,6 +478,7 @@
 		8EEB35852D144D2200567937 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,14 +498,14 @@
 			path = Messenger;
 			sourceTree = "<group>";
 		};
-		8EEB358D2D1456F300567937 /* Messages */ = {
+		8EEB358D2D1456F300567937 /* MessagesList */ = {
 			isa = PBXGroup;
 			children = (
 				8EEB35902D14570500567937 /* Presenter */,
 				8EEB358F2D14570100567937 /* Model */,
 				8EEB358E2D1456FD00567937 /* View */,
 			);
-			path = Messages;
+			path = MessagesList;
 			sourceTree = "<group>";
 		};
 		8EEB358E2D1456FD00567937 /* View */ = {
@@ -575,14 +616,17 @@
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
 				8EEB35882D144F0E00567937 /* UserListView.swift in Sources */,
 				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
+				8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
 				8E03B3E22D11AB6400277D2B /* StartView.swift in Sources */,
 				8EEB35942D14574300567937 /* MessagesListViewPresenter.swift in Sources */,
+				8E0BE2782D194CA200A1CCAA /* ProfileView.swift in Sources */,
 				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
 				8E03B3E02D11AB5800277D2B /* StartViewPresenter.swift in Sources */,
 				8EEB35922D14571E00567937 /* MessagesListView.swift in Sources */,
+				8E0BE27C2D1950A700A1CCAA /* ChatUser.swift in Sources */,
 				8E063A1B2D104494002D2941 /* AuthenticationView.swift in Sources */,
 				8E063A2E2D105CEA002D2941 /* Button.swift in Sources */,
 				8EEB35812D14432500567937 /* TabBarView.swift in Sources */,

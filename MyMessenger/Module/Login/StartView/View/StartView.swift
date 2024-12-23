@@ -43,12 +43,7 @@ class StartView: UIViewController, StartViewProtocol {
     }
     
     private func setConstraints() {
-        NSLayoutConstraint.activate([
-//            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-//            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-//            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            
+        NSLayoutConstraint.activate([            
             pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             pageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             

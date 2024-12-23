@@ -30,7 +30,11 @@ class TabBarPresenter: TabBarPresenterProtocol {
         userList.title = "Users"
         userList.tabBarItem.image = UIImage(systemName: "person.3")
         
-        view?.setControllers(views: [userList, messageList])
+        let profile = Builder.getProfileView()
+        profile.title = "Profile"
+        profile.tabBarItem.image = UIImage(systemName: "person")
+        
+        view?.setControllers(views: [userList, messageList, profile])
         
     }
 }

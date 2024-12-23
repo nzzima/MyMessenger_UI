@@ -36,6 +36,7 @@ class CheckPhoneCodeView: UIViewController, CheckPhoneCodeViewProtocol {
     private lazy var codeField:UITextField = TextField(fieldPlaceholder: "")
     
     public lazy var sendButton:UIButton = Button(buttonText: "Check code") {
+        NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.appWindow])
         print("Sending code to phone number...")
     }
     

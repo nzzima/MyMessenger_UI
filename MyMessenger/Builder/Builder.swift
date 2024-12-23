@@ -59,7 +59,7 @@ class Builder {
         
         view.presenter = presenter
         
-        return view
+        return UINavigationController(rootViewController: view)
     }
     
     static func getMessageListView() -> UIViewController {
@@ -68,6 +68,15 @@ class Builder {
         
         view.presenter = presenter
         
-        return view
+        return UINavigationController(rootViewController: view)
+    }
+    
+    static func getProfileView() -> UIViewController {
+        let view = ProfileView()
+        let presenter = ProfileViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return UINavigationController(rootViewController: view)
     }
 }
