@@ -49,5 +49,11 @@ extension MessagesListView: UITableViewDataSource {
 }
 
 extension MessagesListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatItem = presenter.chatList[indexPath.row]
+        
+        let messangerControler = Builder.getMessengerView(chatItem: chatItem)
     
+        navigationController?.pushViewController(messangerControler, animated: true)
+    }
 }

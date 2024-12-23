@@ -28,6 +28,11 @@
 		8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE2792D194CB500A1CCAA /* ProfileViewPresenter.swift */; };
 		8E0BE27C2D1950A700A1CCAA /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */; };
 		8E0BE27E2D1955AA00A1CCAA /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE27D2D1955AA00A1CCAA /* ChatItem.swift */; };
+		8E0BE2832D195DDC00A1CCAA /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE2822D195DDC00A1CCAA /* MessengerView.swift */; };
+		8E0BE2852D195DE700A1CCAA /* MessengerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE2842D195DE700A1CCAA /* MessengerViewPresenter.swift */; };
+		8E0BE2882D19800500A1CCAA /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0BE2872D19800500A1CCAA /* MessageKit */; };
+		8E0BE28B2D1982D100A1CCAA /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE28A2D1982D100A1CCAA /* Sender.swift */; };
+		8E0BE28D2D19830500A1CCAA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE28C2D19830500A1CCAA /* Message.swift */; };
 		8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */; };
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
 		8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */; };
@@ -64,6 +69,10 @@
 		8E0BE2792D194CB500A1CCAA /* ProfileViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewPresenter.swift; sourceTree = "<group>"; };
 		8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		8E0BE27D2D1955AA00A1CCAA /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		8E0BE2822D195DDC00A1CCAA /* MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerView.swift; sourceTree = "<group>"; };
+		8E0BE2842D195DE700A1CCAA /* MessengerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewPresenter.swift; sourceTree = "<group>"; };
+		8E0BE28A2D1982D100A1CCAA /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		8E0BE28C2D19830500A1CCAA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.swift; sourceTree = "<group>"; };
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
 		8EEB35752D13F70800567937 /* CheckPhoneCodeView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.ext.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0BE2882D19800500A1CCAA /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +388,39 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8E0BE27F2D195DBD00A1CCAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2822D195DDC00A1CCAA /* MessengerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E0BE2802D195DC100A1CCAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2892D1982BA00A1CCAA /* DataModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E0BE2812D195DC600A1CCAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE2842D195DE700A1CCAA /* MessengerViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8E0BE2892D1982BA00A1CCAA /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E0BE28A2D1982D100A1CCAA /* Sender.swift */,
+				8E0BE28C2D19830500A1CCAA /* Message.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		8EC1C0A42D12EE7900A7481D /* CheckPhoneCodeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +539,9 @@
 		8EEB358C2D1456E500567937 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				8E0BE2812D195DC600A1CCAA /* Presenter */,
+				8E0BE2802D195DC100A1CCAA /* Model */,
+				8E0BE27F2D195DBD00A1CCAA /* View */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -551,6 +597,7 @@
 			);
 			name = MyMessenger;
 			packageProductDependencies = (
+				8E0BE2872D19800500A1CCAA /* MessageKit */,
 			);
 			productName = MyMessenger;
 			productReference = 8E0639E92D104245002D2941 /* MyMessenger.app */;
@@ -581,6 +628,7 @@
 			mainGroup = 8E0639E02D104245002D2941;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				8E0BE2862D19800500A1CCAA /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8E0639EA2D104245002D2941 /* Products */;
@@ -611,11 +659,14 @@
 			files = (
 				8EEB357F2D14431A00567937 /* TabBarPresenter.swift in Sources */,
 				8EEB35762D13F70800567937 /* CheckPhoneCodeView.ext.swift in Sources */,
+				8E0BE2852D195DE700A1CCAA /* MessengerViewPresenter.swift in Sources */,
 				8E063A2B2D105122002D2941 /* UIView.ext.swift in Sources */,
 				8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */,
 				8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */,
+				8E0BE28D2D19830500A1CCAA /* Message.swift in Sources */,
 				8EEB358B2D144F7700567937 /* UserListViewPresenter.swift in Sources */,
 				8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */,
+				8E0BE28B2D1982D100A1CCAA /* Sender.swift in Sources */,
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
 				8EEB35882D144F0E00567937 /* UserListView.swift in Sources */,
 				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
@@ -633,6 +684,7 @@
 				8E0BE27C2D1950A700A1CCAA /* ChatUser.swift in Sources */,
 				8E063A1B2D104494002D2941 /* AuthenticationView.swift in Sources */,
 				8E063A2E2D105CEA002D2941 /* Button.swift in Sources */,
+				8E0BE2832D195DDC00A1CCAA /* MessengerView.swift in Sources */,
 				8EEB35812D14432500567937 /* TabBarView.swift in Sources */,
 				8E03B3D62D11A45A00277D2B /* String.ext.swift in Sources */,
 				8E063A202D10463E002D2941 /* Builder.swift in Sources */,
@@ -858,6 +910,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E0BE2862D19800500A1CCAA /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E0BE2872D19800500A1CCAA /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E0BE2862D19800500A1CCAA /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E0639E12D104245002D2941 /* Project object */;
 }
