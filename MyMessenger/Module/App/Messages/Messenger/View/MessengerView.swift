@@ -18,5 +18,35 @@ class MessengerView: MessagesViewController, MessengerViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = presenter.title
+        showMessageTimestampOnSwipeLeft = true
+        messagerSetup()
     }
+    
+    private func messagerSetup() {
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
+        
+        messagesCollectionView.reloadData()
+    }
+}
+
+extension MessengerView: MessagesDataSource {
+    
+    var currentSender: any MessageKit.SenderType {
+        presenter.selfSender
+    }
+    
+    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessageKit.MessagesCollectionView) -> MessageType {
+        presenter.messages[indexPath.section]
+    }
+    
+    func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
+        presenter.messages.count
+    }
+}
+
+extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
+    
 }

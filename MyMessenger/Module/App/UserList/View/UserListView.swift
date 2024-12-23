@@ -25,7 +25,7 @@ class UserListView: UIViewController, UserListViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Users"
+        navigationItem.title = "Users"
         view.addSubview(tableView)
     }
 }
