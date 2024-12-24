@@ -28,13 +28,18 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
     
     private lazy var nameField:UITextField = TextField(fieldPlaceholder: "Name")
     private lazy var surnameField:UITextField = TextField(fieldPlaceholder: "Surname")
-    private lazy var loginField:UITextField = TextField(fieldPlaceholder: "Login")
+    private lazy var emailField:UITextField = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField:UITextField = TextField(fieldPlaceholder: "Password", isPassword: true)
     private lazy var passwordConfirmField:UITextField = TextField(fieldPlaceholder: "Confirm your password", isPassword: true)
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
-    private lazy var registrationButton:UIButton = Button(buttonText: "Register") {
-        print("Registration")
+    private lazy var registrationButton:UIButton = Button(buttonText: "Register") { [weak self] in
+        guard let self = self else { return }
+        
+        let userInfo = UserInfo(name: nameField.text ?? "", surname: surnameField.text ?? "", email: emailField.text ?? "", password: passwordField.text ?? "", phone: phoneField.text ?? "")
+        
+        presenter.sendToRegistration(userInfo: userInfo)
+
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Authentication", buttonColor: .black, titleColor: .white) {
         NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.authentificationWindow])
@@ -45,7 +50,7 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
-        view.addSubviews(nameField, surnameField, pageTitle, loginField, passwordField, passwordConfirmField, phoneField, registrationButton, bottomButton)
+        view.addSubviews(nameField, surnameField, pageTitle, emailField, passwordField, passwordConfirmField, phoneField, registrationButton, bottomButton)
         
         phoneField.delegate = self
         phoneField.keyboardType = .decimalPad
@@ -68,15 +73,15 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
             surnameField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             surnameField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 15),
             
-            loginField.heightAnchor.constraint(equalToConstant: 50),
-            loginField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            loginField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            loginField.topAnchor.constraint(equalTo: surnameField.bottomAnchor, constant: 15),
+            emailField.heightAnchor.constraint(equalToConstant: 50),
+            emailField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            emailField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            emailField.topAnchor.constraint(equalTo: surnameField.bottomAnchor, constant: 15),
             
             passwordField.heightAnchor.constraint(equalToConstant: 50),
             passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            passwordField.topAnchor.constraint(equalTo: loginField.bottomAnchor, constant: 15),
+            passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 15),
             
             passwordConfirmField.heightAnchor.constraint(equalToConstant: 50),
             passwordConfirmField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

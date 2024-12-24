@@ -50,6 +50,8 @@
 		8EFEA3422D1A9F9D005651B5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8EFEA3412D1A9F9D005651B5 /* FirebaseFirestore */; };
 		8EFEA3442D1A9F9D005651B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8EFEA3432D1A9F9D005651B5 /* FirebaseStorage */; };
 		8EFEA3472D1AA411005651B5 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEA3462D1AA411005651B5 /* FieldValidator.swift */; };
+		8EFEA3492D1AA96F005651B5 /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEA3482D1AA96F005651B5 /* RegistrationManager.swift */; };
+		8EFEA34C2D1AE107005651B5 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEA34B2D1AE107005651B5 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListViewPresenter.swift; sourceTree = "<group>"; };
 		8EFEA3382D1A9CC0005651B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EFEA3462D1AA411005651B5 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		8EFEA3482D1AA96F005651B5 /* RegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
+		8EFEA34B2D1AE107005651B5 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +364,8 @@
 		8E063A302D106C40002D2941 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8EFEA34A2D1AE0F9005651B5 /* DataModel */,
+				8EFEA3482D1AA96F005651B5 /* RegistrationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -612,6 +618,14 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		8EFEA34A2D1AE0F9005651B5 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEA34B2D1AE107005651B5 /* UserInfo.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -711,6 +725,8 @@
 				8EEB35882D144F0E00567937 /* UserListView.swift in Sources */,
 				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
 				8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */,
+				8EFEA3492D1AA96F005651B5 /* RegistrationManager.swift in Sources */,
+				8EFEA34C2D1AE107005651B5 /* UserInfo.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
 				8E03B3E22D11AB6400277D2B /* StartView.swift in Sources */,

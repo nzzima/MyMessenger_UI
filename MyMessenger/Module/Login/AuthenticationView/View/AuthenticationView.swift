@@ -26,7 +26,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         return $0
     }(UILabel())
     
-    private lazy var loginField:UITextField = TextField(fieldPlaceholder: "Login")
+    private lazy var emailField:UITextField = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField:UITextField = TextField(fieldPlaceholder: "Password", isPassword: true)
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
@@ -44,7 +44,7 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "startImage")!)
         
-        view.addSubviews(pageTitle, loginField, passwordField, phoneField, authentecateButton, bottomButton)
+        view.addSubviews(pageTitle, emailField, passwordField, phoneField, authentecateButton, bottomButton)
         
         phoneField.delegate = self
         phoneField.keyboardType = .decimalPad
@@ -57,10 +57,10 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
             pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             pageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            loginField.heightAnchor.constraint(equalToConstant: 50),
-            loginField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            loginField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            loginField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
+            emailField.heightAnchor.constraint(equalToConstant: 50),
+            emailField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            emailField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            emailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
             
             passwordField.heightAnchor.constraint(equalToConstant: 50),
             passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
