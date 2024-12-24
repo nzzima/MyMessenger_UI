@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class FieldValidator {
+    
+}
+
+enum FieldType {
+    case name, surname, login, password, phone
+}
