@@ -46,6 +46,20 @@ extension MessengerView: MessagesDataSource {
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         presenter.messages.count
     }
+    
+    private func insertMessage(_ message: Message) {
+        presenter.messages.append(message)
+        
+        // Reload last sestion to update header/footer labels and insert a new one
+        messagesCollectionView.performBatchUpdates({
+            messagesCollectionView.insertSections([presenter.messages.count - 1])
+            if presenter.messages.count >= 2 {
+                messagesCollectionView.reloadSections([presenter.messages.count - 2])
+            }
+        }, completion: {[weak self] _ in
+            self?.messagesCollectionView.scrollToLastItem(animated: true)
+        })
+    }
 }
 
 extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
@@ -89,6 +103,9 @@ extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
 
 extension MessengerView: InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-        print(text)
+        let message = Message(sender: presenter.selfSender, messageId: UUID().uuidString, sentDate: Date(), kind: .text(text))
+        
+        self.insertMessage(message)
+        inputBar.inputTextView.text = ""
     }
 }
