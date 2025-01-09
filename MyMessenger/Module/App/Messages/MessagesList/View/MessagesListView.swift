@@ -27,6 +27,14 @@ class MessagesListView: UIViewController, MessagesListViewProtocol {
         view.backgroundColor = .lightGray
         view.addSubview(tableView)
     }
+    
+    override func viewWillAppear(_ animated: Bool) { // Hide tabBar when tap to messenger with user
+        hidesBottomBarWhenPushed = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) { // Show tabBar when return to chats
+        hidesBottomBarWhenPushed = false
+    }
 }
 
 extension MessagesListView: UITableViewDataSource {

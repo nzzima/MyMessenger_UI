@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol RegistrationViewProtocol: AnyObject {
     
 }
 
 class RegistrationView: UIViewController, RegistrationViewProtocol {
-    
+
+    var onSave: ((_ verifyID: String) -> ())?
     var presenter: RegistrationViewPresenterProtocol!
     
     private let maxNumberCount = 11
@@ -45,6 +47,7 @@ class RegistrationView: UIViewController, RegistrationViewProtocol {
         NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.authentificationWindow])
         print("Go to Authentication")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -28,7 +28,7 @@ class FireBaseManager {
     func signOut() {
         do {
             try auth.signOut()
-            NotificationCenter.default.post(name: .AuthStateDidChange, object: nil, userInfo: [String.state: WindowManager.appWindow])
+            NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.authentificationWindow])
         } catch {
             print(error.localizedDescription)
         }

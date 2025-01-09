@@ -26,14 +26,18 @@ class AuthenticationView: UIViewController, AuthenticationViewProtocol {
         return $0
     }(UILabel())
     
+    private lazy var nameField:UITextField = TextField(fieldPlaceholder: "Name")
+    private lazy var surnameField:UITextField = TextField(fieldPlaceholder: "Surname")
     private lazy var emailField:UITextField = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField:UITextField = TextField(fieldPlaceholder: "Password", isPassword: true)
     private lazy var phoneField:UITextField = TextField(fieldPlaceholder: "Phone")
     
-    private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") {
+    private lazy var authentecateButton:UIButton = Button(buttonText: "Enter") { [weak self] in
+        guard let self = self else { return }
         
-        // MARK: -- Добавить проверку на не пустые поля ввода
-        NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.checkCodeWindow])
+        let userInfo = UserInfo(name: nameField.text ?? "", surname: surnameField.text ?? "", email: emailField.text ?? "", password: passwordField.text ?? "", phone: phoneField.text ?? "")
+        
+        presenter.signIn(userInfo: userInfo)
     }
     private lazy var bottomButton: UIButton = Button(buttonText: "Registration", buttonColor: .black, titleColor: .white) {
         NotificationCenter.default.post(name: .windowManager, object: nil, userInfo: [String.state: WindowManager.registrationWindow])

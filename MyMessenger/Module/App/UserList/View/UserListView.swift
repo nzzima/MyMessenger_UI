@@ -15,6 +15,8 @@ class UserListView: UIViewController, UserListViewProtocol {
     
     var presenter: UserListViewPresenterProtocol!
     
+    lazy var signOutButton: UIBarButtonItem = UIBarButtonItem(image: .actions, style: .done, target: self, action: #selector(signOut))
+    
     lazy var tableView: UITableView = {
         $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         $0.dataSource = self
@@ -27,6 +29,12 @@ class UserListView: UIViewController, UserListViewProtocol {
         view.backgroundColor = .white
         navigationItem.title = "Users"
         view.addSubview(tableView)
+        navigationItem.rightBarButtonItem = signOutButton
+    
+    }
+    
+    @objc func signOut() {
+        FireBaseManager.shared.signOut()
     }
 }
 

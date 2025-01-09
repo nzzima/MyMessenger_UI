@@ -30,6 +30,7 @@ class TextField: UITextField {
         backgroundColor = .white
         textColor = .black
         layer.cornerRadius = 10
+        autocapitalizationType = .none // Disabled field beginning with initial caps
     }
     
     required init?(coder: NSCoder) {

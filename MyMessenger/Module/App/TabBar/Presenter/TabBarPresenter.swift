@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TabBarPresenterProtocol: AnyObject {
-    init(view: TabBarViewProtocol)
+    //init(view: TabBarViewProtocol)
 }
 
 class TabBarPresenter: TabBarPresenterProtocol {
