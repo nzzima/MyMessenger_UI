@@ -106,6 +106,7 @@ extension MessengerView: InputBarAccessoryViewDelegate {
         let message = Message(sender: presenter.selfSender, messageId: UUID().uuidString, sentDate: Date(), kind: .text(text))
         
         self.insertMessage(message)
+        self.presenter.sendMessage(message: message)
         inputBar.inputTextView.text = ""
     }
 }

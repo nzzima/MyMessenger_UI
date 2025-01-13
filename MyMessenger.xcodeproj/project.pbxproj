@@ -33,6 +33,9 @@
 		8E0BE2882D19800500A1CCAA /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0BE2872D19800500A1CCAA /* MessageKit */; };
 		8E0BE28B2D1982D100A1CCAA /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE28A2D1982D100A1CCAA /* Sender.swift */; };
 		8E0BE28D2D19830500A1CCAA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BE28C2D19830500A1CCAA /* Message.swift */; };
+		8E31D11F2D34E9F8002EDD27 /* UserListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D11E2D34E9F8002EDD27 /* UserListManager.swift */; };
+		8E31D1212D34F8AF002EDD27 /* MessageSendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */; };
+		8E31D1232D355573002EDD27 /* MessagesListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D1222D355573002EDD27 /* MessagesListManager.swift */; };
 		8E9C91FA2D300A29008F55CA /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C91F92D300A29008F55CA /* AuthenticationManager.swift */; };
 		8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */; };
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
@@ -83,6 +86,9 @@
 		8E0BE2842D195DE700A1CCAA /* MessengerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewPresenter.swift; sourceTree = "<group>"; };
 		8E0BE28A2D1982D100A1CCAA /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		8E0BE28C2D19830500A1CCAA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8E31D11E2D34E9F8002EDD27 /* UserListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListManager.swift; sourceTree = "<group>"; };
+		8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendManager.swift; sourceTree = "<group>"; };
+		8E31D1222D355573002EDD27 /* MessagesListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListManager.swift; sourceTree = "<group>"; };
 		8E9C91F92D300A29008F55CA /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.swift; sourceTree = "<group>"; };
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0BE2892D1982BA00A1CCAA /* DataModel */,
+				8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -550,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0BE27B2D1950A700A1CCAA /* ChatUser.swift */,
+				8E31D11E2D34E9F8002EDD27 /* UserListManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,6 +602,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0BE27D2D1955AA00A1CCAA /* ChatItem.swift */,
+				8E31D1222D355573002EDD27 /* MessagesListManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -720,6 +729,7 @@
 				8E063A2B2D105122002D2941 /* UIView.ext.swift in Sources */,
 				8EEB35792D14087D00567937 /* PhoneFieldDelegate.swift in Sources */,
 				8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */,
+				8E31D1212D34F8AF002EDD27 /* MessageSendManager.swift in Sources */,
 				8E0BE28D2D19830500A1CCAA /* Message.swift in Sources */,
 				8EEB358B2D144F7700567937 /* UserListViewPresenter.swift in Sources */,
 				8E063A092D10438D002D2941 /* AppDelegate.swift in Sources */,
@@ -727,6 +737,7 @@
 				8E063A1D2D104513002D2941 /* AuthenticationViewPresenter.swift in Sources */,
 				8EEB35882D144F0E00567937 /* UserListView.swift in Sources */,
 				8E03B3D92D11A61B00277D2B /* NSNotification.Name.ext.swift in Sources */,
+				8E31D11F2D34E9F8002EDD27 /* UserListManager.swift in Sources */,
 				8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */,
 				8EFEA3492D1AA96F005651B5 /* RegistrationManager.swift in Sources */,
 				8EFEA34C2D1AE107005651B5 /* UserInfo.swift in Sources */,
@@ -738,6 +749,7 @@
 				8E0BE2782D194CA200A1CCAA /* ProfileView.swift in Sources */,
 				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
+				8E31D1232D355573002EDD27 /* MessagesListManager.swift in Sources */,
 				8E03B3E02D11AB5800277D2B /* StartViewPresenter.swift in Sources */,
 				8EEB35922D14571E00567937 /* MessagesListView.swift in Sources */,
 				8E0BE27C2D1950A700A1CCAA /* ChatUser.swift in Sources */,

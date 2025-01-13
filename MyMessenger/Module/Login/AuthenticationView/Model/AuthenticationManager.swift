@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 class AuthenticationManager {
      
@@ -19,6 +20,16 @@ class AuthenticationManager {
             
             guard let result else { return }
             
+            Firestore.firestore()
+                .collection(.users)
+                .document(result.user.uid)
+                .getDocument() { snap, err in
+                    guard err == nil else {return}
+                    if let userData = snap?.data() {
+                        let name = userData["name"] as? String ?? ""
+                        UserDefaults.standard.set(name, forKey: "selfName")
+                    }
+                }
             completion(.success(true))
         }
     }

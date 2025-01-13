@@ -22,6 +22,7 @@ extension String {
 extension String {
     static let users = "users"
     static let conversation = "conversation"
+    static let messages = "messages"
 }
 
 extension String {

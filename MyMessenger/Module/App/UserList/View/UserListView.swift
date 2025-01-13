@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserListViewProtocol: AnyObject {
-    
+    func reloadTable()
 }
 
 class UserListView: UIViewController, UserListViewProtocol {
@@ -31,6 +31,10 @@ class UserListView: UIViewController, UserListViewProtocol {
         view.addSubview(tableView)
         navigationItem.rightBarButtonItem = signOutButton
     
+    }
+    
+    func reloadTable() {
+        tableView.reloadData()
     }
     
     @objc func signOut() {
@@ -59,7 +63,15 @@ extension UserListView: UITableViewDataSource {
 }
 
 extension UserListView: UITableViewDelegate {
+    
+    // Show real users from Firebase database
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(presenter.users[indexPath.row].id)
+        
+        let chatItem = ChatItem(convoId: nil, name: presenter.users[indexPath.row].name, otherUserId: presenter.users[indexPath.row].id, date: Date(), lastMessage: nil)
+        
+        let messenger = Builder.getMessengerView(chatItem: chatItem)
+        
+        navigationController?.pushViewController(messenger, animated: true)
     }
 }

@@ -16,10 +16,20 @@ class MessagesListViewPresenter: MessagesListViewPresenterProtocol {
     
     weak var view: MessagesListViewProtocol?
     
+    private let messageListManager = MessagesListManager()
     var chatList: [ChatItem]
     
     required init(view: any MessagesListViewProtocol) {
         self.view = view
-        self.chatList = ChatItem.mockData()
+        self.chatList = []
+    }
+    
+    func getChatList() {
+        messageListManager.getChatList { [weak self] chatList in
+            guard let self = self else { return }
+            
+            self.chatList = chatList
+            
+        }
     }
 }

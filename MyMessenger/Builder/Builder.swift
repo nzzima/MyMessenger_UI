@@ -82,7 +82,7 @@ class Builder {
     
     static func getMessengerView(chatItem: ChatItem) -> UIViewController {
         let view = MessengerView()
-        let presenter = MessengerViewPresenter(view: view, convoId: chatItem.id, otherId: chatItem.otherUserId, name: chatItem.name)
+        let presenter = MessengerViewPresenter(view: view, convoId: chatItem.convoId, otherId: chatItem.otherUserId, name: chatItem.name)
         
         view.presenter = presenter
         

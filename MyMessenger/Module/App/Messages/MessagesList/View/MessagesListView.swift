@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MessagesListViewProtocol: AnyObject {
-    
+    func reloadTable()
 }
 
 class MessagesListView: UIViewController, MessagesListViewProtocol {
@@ -49,10 +49,14 @@ extension MessagesListView: UITableViewDataSource {
         var config =  cell.defaultContentConfiguration()
         config.text = presenter.chatList[indexPath.row].name
         config.image = UIImage(systemName: "person.fill")
-        config.secondaryText = chatItem.lastMessage.truncate(to: 20)
+        config.secondaryText = chatItem.lastMessage?.truncate(to: 20)
         
         cell.contentConfiguration = config
         return cell
+    }
+    
+    func reloadTable() {
+        tableView.reloadData()
     }
 }
 
