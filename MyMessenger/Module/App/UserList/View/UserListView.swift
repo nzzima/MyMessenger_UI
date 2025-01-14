@@ -18,11 +18,12 @@ class UserListView: UIViewController, UserListViewProtocol {
     lazy var signOutButton: UIBarButtonItem = UIBarButtonItem(image: .actions, style: .done, target: self, action: #selector(signOut))
     
     lazy var tableView: UITableView = {
-        $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        $0.register(UINib(nibName: "UserCellTableViewCell", bundle: nil), forCellReuseIdentifier: UserCellTableViewCell.reuseIdentifier)
         $0.dataSource = self
         $0.delegate = self
+        $0.separatorStyle = .none
         return $0
-    }(UITableView(frame: view.bounds, style: .insetGrouped))
+    }(UITableView(frame: view.bounds))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,17 +49,23 @@ extension UserListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cellItem = presenter.users[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserCellTableViewCell.reuseIdentifier, for: indexPath) as! UserCellTableViewCell
         
-        var config = cell.defaultContentConfiguration()
-        config.text = cellItem.name
-        config.image = UIImage(systemName: "person.circle.fill")
+        cell.selectionStyle = .none
         
-        cell.contentConfiguration = config
+//        let cellItem = presenter.users[indexPath.row]
+//
+//        var config = cell.defaultContentConfiguration()
+//        config.text = cellItem.name
+//        config.image = UIImage(systemName: "person.circle.fill")
+//        
+//        cell.contentConfiguration = config
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
 }
 
