@@ -36,6 +36,7 @@
 		8E31D11F2D34E9F8002EDD27 /* UserListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D11E2D34E9F8002EDD27 /* UserListManager.swift */; };
 		8E31D1212D34F8AF002EDD27 /* MessageSendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */; };
 		8E31D1232D355573002EDD27 /* MessagesListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31D1222D355573002EDD27 /* MessagesListManager.swift */; };
+		8E9715D32D3640CA00F71734 /* GetMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9715D22D3640CA00F71734 /* GetMessageManager.swift */; };
 		8E9C91FA2D300A29008F55CA /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C91F92D300A29008F55CA /* AuthenticationManager.swift */; };
 		8EC1C0A92D12EEF900A7481D /* CheckPhoneCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */; };
 		8EC1C0AB2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */; };
@@ -89,6 +90,7 @@
 		8E31D11E2D34E9F8002EDD27 /* UserListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListManager.swift; sourceTree = "<group>"; };
 		8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendManager.swift; sourceTree = "<group>"; };
 		8E31D1222D355573002EDD27 /* MessagesListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListManager.swift; sourceTree = "<group>"; };
+		8E9715D22D3640CA00F71734 /* GetMessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMessageManager.swift; sourceTree = "<group>"; };
 		8E9C91F92D300A29008F55CA /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		8EC1C0A82D12EEF900A7481D /* CheckPhoneCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeView.swift; sourceTree = "<group>"; };
 		8EC1C0AA2D12EF2300A7481D /* CheckPhoneCodeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPhoneCodeViewPresenter.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 			children = (
 				8E0BE2892D1982BA00A1CCAA /* DataModel */,
 				8E31D1202D34F8AF002EDD27 /* MessageSendManager.swift */,
+				8E9715D22D3640CA00F71734 /* GetMessageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				8EEB35942D14574300567937 /* MessagesListViewPresenter.swift in Sources */,
 				8E0BE27E2D1955AA00A1CCAA /* ChatItem.swift in Sources */,
 				8E0BE2782D194CA200A1CCAA /* ProfileView.swift in Sources */,
+				8E9715D32D3640CA00F71734 /* GetMessageManager.swift in Sources */,
 				8E063A352D106CA3002D2941 /* RegistrationViewPresenter.swift in Sources */,
 				8E063A0A2D10438D002D2941 /* SceneDelegate.swift in Sources */,
 				8E31D1232D355573002EDD27 /* MessagesListManager.swift in Sources */,

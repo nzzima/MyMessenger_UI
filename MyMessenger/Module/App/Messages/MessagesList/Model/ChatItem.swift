@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseCore
 
 struct ChatItem {
     var convoId: String? // convoid
@@ -16,15 +17,23 @@ struct ChatItem {
     var date: Date
     var lastMessage: String?
     
-    init(convoId: String, date: [String: Any]) {
+    init(convoId: String?, name: String, otherUserId: String, date: Date, lastMessage: String?) {
         self.convoId = convoId
-        self.name = date["name"] as? String ?? ""
-        self.otherUserId = date["otherId"] as? String ?? ""
+        self.name = name
+        self.otherUserId = otherUserId
+        self.date = date
+        self.lastMessage = lastMessage
+    }
+    
+    init(convoId: String, data: [String: Any]) {
+        self.convoId = convoId
+        self.name = data["name"] as? String ?? ""
+        self.otherUserId = data["otherId"] as? String ?? ""
         self.date = {
             let timeStamp = data["date"] as? Timestamp
             return timeStamp?.dateValue() ?? Date()
             
         }()
-        self.lastMessage = date["lastMessage"] as? String ?? ""
+        self.lastMessage = data["lastMessage"] as? String ?? ""
     }
 }

@@ -22,6 +22,7 @@ class MessagesListViewPresenter: MessagesListViewPresenterProtocol {
     required init(view: any MessagesListViewProtocol) {
         self.view = view
         self.chatList = []
+        getChatList()
     }
     
     func getChatList() {
@@ -29,7 +30,7 @@ class MessagesListViewPresenter: MessagesListViewPresenterProtocol {
             guard let self = self else { return }
             
             self.chatList = chatList
-            
+            self.view?.reloadTable()
         }
     }
 }

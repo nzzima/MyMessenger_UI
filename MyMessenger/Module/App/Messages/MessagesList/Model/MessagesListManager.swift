@@ -17,7 +17,7 @@ class MessagesListManager {
             .collection(.users)
             .document(uid)
             .collection(.conversation)
-            .order(by: "date")
+            .order(by: "date", descending: true)
             .addSnapshotListener { snap, err in
                 guard err == nil else { return }
                 
@@ -25,7 +25,7 @@ class MessagesListManager {
                 var chatItems: [ChatItem] = []
                 
                 doc.forEach {
-                    let chatItem = ChatItem(convoId: $0.documentID, date: $0.data())
+                    let chatItem = ChatItem(convoId: $0.documentID, data: $0.data())
                     chatItems.append(chatItem)
                 }
                 

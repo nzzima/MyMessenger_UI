@@ -23,7 +23,7 @@ class MessengerViewPresenter: MessengerViewPresenterProtocol {
     var title: String
     private var otherId: String
     private let messageSendManager = MessageSendManager()
-    
+    private let getMessageManager = GetMessageManager()
     var selfSender: Sender
     
     private lazy var otherSender = Sender(senderId: otherId, displayName: title)
@@ -36,6 +36,11 @@ class MessengerViewPresenter: MessengerViewPresenterProtocol {
         self.messages = []
         
         self.selfSender = Sender(senderId: (FireBaseManager.shared.getUser()?.uid)!, displayName: UserDefaults.standard.string(forKey: "selfName") ?? "")
+        
+        if convoId != nil {
+            getMessages(convoId: convoId!)
+            loadLastMessage(convoId: convoId!)
+        }
     }
     
     func sendMessage(message: Message) {
@@ -49,6 +54,27 @@ class MessengerViewPresenter: MessengerViewPresenterProtocol {
             }
             
         default : break
+        }
+    }
+    
+    func getMessages(convoId: String) {
+        getMessageManager.getAllMessage(convoId: convoId) { [weak self] message in
+            guard let self = self else { return }
+            
+            self.messages = message
+            self.view?.reloadCollection()
+        }
+    }
+    
+    private func loadLastMessage(convoId: String) {
+        getMessageManager.loadOneMessage(convoId: convoId) { [weak self] message in
+            guard let self = self else { return }
+            
+            if message.sender.senderId != selfSender.senderId {
+                self.messages.append(message)
+                view?.reloadCollection()
+            }
+        
         }
     }
 }

@@ -25,6 +25,7 @@ class MessagesListView: UIViewController, MessagesListViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
+        navigationItem.title = "Messenger"
         view.addSubview(tableView)
     }
     

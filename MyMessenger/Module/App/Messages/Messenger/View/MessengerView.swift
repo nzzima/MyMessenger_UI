@@ -10,7 +10,7 @@ import MessageKit
 import InputBarAccessoryView
 
 protocol MessengerViewProtocol: AnyObject {
-    
+    func reloadCollection()
 }
 
 class MessengerView: MessagesViewController, MessengerViewProtocol {
@@ -22,7 +22,11 @@ class MessengerView: MessagesViewController, MessengerViewProtocol {
         title = presenter.title
         showMessageTimestampOnSwipeLeft = true
         messagerSetup()
-        messagesCollectionView.reloadData()
+        messagesCollectionView.reloadDataAndKeepOffset()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        messagesCollectionView.scrollToLastItem(animated: true)
     }
     
     private func messagerSetup() {
@@ -59,6 +63,10 @@ extension MessengerView: MessagesDataSource {
         }, completion: {[weak self] _ in
             self?.messagesCollectionView.scrollToLastItem(animated: true)
         })
+    }
+    
+    func reloadCollection() {
+        messagesCollectionView.reloadDataAndKeepOffset()
     }
 }
 
