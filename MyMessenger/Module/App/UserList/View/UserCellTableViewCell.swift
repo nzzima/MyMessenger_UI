@@ -27,6 +27,7 @@ class UserCellTableViewCell: UITableViewCell {
     func settingCell() {
         parentView.layer.cornerRadius = 10
         userImage.layer.cornerRadius = userImage.frame.width / 2
+        userImage.image = UIImage(named: "basicUserImage")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
