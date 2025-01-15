@@ -20,8 +20,8 @@ class UserCellTableViewCell: UITableViewCell {
         settingCell()
     }
     
-    func configCell(_ email: String) {
-        
+    func configCell(_ name: String) {
+        userName.text = name
     }
     
     func settingCell() {

@@ -53,7 +53,8 @@ extension UserListView: UITableViewDataSource {
         
         cell.selectionStyle = .none
         
-//        let cellItem = presenter.users[indexPath.row]
+        let cellItem = presenter.users[indexPath.row]
+        cell.configCell(cellItem.name)
 //
 //        var config = cell.defaultContentConfiguration()
 //        config.text = cellItem.name
