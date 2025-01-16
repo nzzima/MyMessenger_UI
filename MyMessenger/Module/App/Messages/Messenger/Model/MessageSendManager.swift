@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class MessageSendManager {
     
+    //MARK: Check existing chat: yes - set message, if not - create new chat.
     func sendMessage(convoId: String?, message: String, otherUser: Sender, completion: @escaping (String?) -> Void) {
         guard let selfId = FireBaseManager.shared.getUser()?.uid else { return }
         
@@ -23,6 +24,7 @@ class MessageSendManager {
         }
     }
     
+    //MARK: Creat new chat (conversation)
     private func createNewConvo(uid: String, message: String, otherUser: Sender, completion: (String) -> ()) {
         let convoId = UUID().uuidString
         let convoData: [String: Any] = [
@@ -41,6 +43,7 @@ class MessageSendManager {
         completion(convoId)
     }
     
+    //MARK: Send message to chat
     private func setMessage(uid: String, convoId: String, message: String, otherUser: Sender) {
         
         let messageData: [String: Any] = [

@@ -48,6 +48,8 @@
 		8EEB358B2D144F7700567937 /* UserListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB358A2D144F7700567937 /* UserListViewPresenter.swift */; };
 		8EEB35922D14571E00567937 /* MessagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35912D14571E00567937 /* MessagesListView.swift */; };
 		8EEB35942D14574300567937 /* MessagesListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */; };
+		8EECF7082D368C9C008D7A82 /* UserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECF7062D368C9C008D7A82 /* UserCellTableViewCell.swift */; };
+		8EECF7092D368C9C008D7A82 /* UserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF7072D368C9C008D7A82 /* UserCellTableViewCell.xib */; };
 		8EFEA3392D1A9CC0005651B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EFEA3382D1A9CC0005651B5 /* GoogleService-Info.plist */; };
 		8EFEA33B2D1A9DA4005651B5 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8EFEA33A2D1A9DA4005651B5 /* FirebaseCore */; };
 		8EFEA33E2D1A9F9D005651B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8EFEA33D2D1A9F9D005651B5 /* FirebaseAuth */; };
@@ -102,6 +104,8 @@
 		8EEB358A2D144F7700567937 /* UserListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewPresenter.swift; sourceTree = "<group>"; };
 		8EEB35912D14571E00567937 /* MessagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListView.swift; sourceTree = "<group>"; };
 		8EEB35932D14574300567937 /* MessagesListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListViewPresenter.swift; sourceTree = "<group>"; };
+		8EECF7062D368C9C008D7A82 /* UserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellTableViewCell.swift; sourceTree = "<group>"; };
+		8EECF7072D368C9C008D7A82 /* UserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCellTableViewCell.xib; sourceTree = "<group>"; };
 		8EFEA3382D1A9CC0005651B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EFEA3462D1AA411005651B5 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		8EFEA3482D1AA96F005651B5 /* RegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
@@ -552,6 +556,8 @@
 			isa = PBXGroup;
 			children = (
 				8EEB35872D144F0E00567937 /* UserListView.swift */,
+				8EECF7062D368C9C008D7A82 /* UserCellTableViewCell.swift */,
+				8EECF7072D368C9C008D7A82 /* UserCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EECF7092D368C9C008D7A82 /* UserCellTableViewCell.xib in Resources */,
 				8E063A0C2D10438D002D2941 /* Assets.xcassets in Resources */,
 				8E063A0E2D10438D002D2941 /* LaunchScreen.storyboard in Resources */,
 				8EFEA3392D1A9CC0005651B5 /* GoogleService-Info.plist in Resources */,
@@ -743,6 +750,7 @@
 				8E31D11F2D34E9F8002EDD27 /* UserListManager.swift in Sources */,
 				8E0BE27A2D194CB500A1CCAA /* ProfileViewPresenter.swift in Sources */,
 				8EFEA3492D1AA96F005651B5 /* RegistrationManager.swift in Sources */,
+				8EECF7082D368C9C008D7A82 /* UserCellTableViewCell.swift in Sources */,
 				8EFEA34C2D1AE107005651B5 /* UserInfo.swift in Sources */,
 				8E063A232D1046FF002D2941 /* FireBaseManager.swift in Sources */,
 				8E063A282D104948002D2941 /* TextField.swift in Sources */,
