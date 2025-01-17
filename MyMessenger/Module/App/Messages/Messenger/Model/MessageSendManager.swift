@@ -75,7 +75,7 @@ class MessageSendManager {
             .document(convoId)
             .setData(selfLastMessage)
         
-        // Other last messagewww
+        // Other last message
         let otherUserLastMessage : [String: Any] = [
             "name": UserDefaults.standard.string(forKey: "selfName") ?? "",
             "otherId": otherUser.senderId,

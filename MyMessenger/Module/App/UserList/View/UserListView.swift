@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 protocol UserListViewProtocol: AnyObject {
     func reloadTable()
@@ -72,14 +73,25 @@ extension UserListView: UITableViewDataSource {
 
 extension UserListView: UITableViewDelegate {
     
-    // Show real users from Firebase database
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(presenter.users[indexPath.row].id)
+        guard let uid = FireBaseManager.shared.getUser()?.uid else { return }
+//        print("tapped user = ", presenter.users[indexPath.row].id) //Tapped user id in userlist
+//        print("own user = ", uid)
+//        
+
+        for convo in presenter.convos {
+            if convo.users.contains(presenter.users[indexPath.row].id) && convo.users.contains(uid){
+                let chatItem = presenter.chatList[indexPath.row] // Existed chat
+                let messenger = Builder.getMessengerView(chatItem: chatItem)
+                navigationController?.pushViewController(messenger, animated: true)
+                return
+            }
+        }
         
-        let chatItem = ChatItem(convoId: nil, name: presenter.users[indexPath.row].name, otherUserId: presenter.users[indexPath.row].id, date: Date(), lastMessage: nil)
-        
+        let chatItem = ChatItem(convoId: nil, name: presenter.users[indexPath.row].name, otherUserId: presenter.users[indexPath.row].id, date: Date(), lastMessage: nil) // New chat
         let messenger = Builder.getMessengerView(chatItem: chatItem)
-        
         navigationController?.pushViewController(messenger, animated: true)
+        
     }
 }

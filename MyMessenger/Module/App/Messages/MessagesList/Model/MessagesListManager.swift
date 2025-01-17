@@ -17,7 +17,7 @@ class MessagesListManager {
             .collection(.users)
             .document(uid)
             .collection(.conversation)
-            .order(by: "date", descending: true)
+            .order(by: "date", descending: false)
             .addSnapshotListener { snap, err in
                 guard err == nil else { return }
                 

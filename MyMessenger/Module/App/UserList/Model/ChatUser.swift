@@ -11,8 +11,8 @@ struct ChatUser {
     var id: String
     var name: String
     
-    init(uid: String, userInfo: [String: Any]) {
-        self.id = uid
+    init(id: String, userInfo: [String: Any]) {
+        self.id = id
         self.name = userInfo["name"] as? String ?? ""
     }
 }

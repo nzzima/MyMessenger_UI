@@ -33,7 +33,7 @@ class GetMessageManager {
     }
     
     func loadOneMessage(convoId: String, completion: @escaping (Message) -> Void) {
-        guard let lastSnapshot else {return}
+        //guard let lastSnapshot else {return}
         Firestore.firestore()
             .collection(.conversation)
             .document(convoId)

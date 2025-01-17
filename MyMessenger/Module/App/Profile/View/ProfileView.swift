@@ -13,11 +13,12 @@ protocol ProfileViewProtocol: AnyObject {
 
 class ProfileView: UIViewController, ProfileViewProtocol {
     
-    var presenter: ProfileViewPresenterProtocol?
+    var presenter: ProfileViewPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .orange
+        navigationItem.title = "Profile"
+        view.backgroundColor = .white
     }
+    
 }
